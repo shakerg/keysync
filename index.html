@@ -1,0 +1,38 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub App Configuration</title>
+</head>
+
+<body>
+    <h1>Configure GitHub App</h1>
+    <form action="/execute" method="POST">
+        <label for="appId">App ID:</label><br>
+        <input type="text" id="appId" name="appId" required><br><br>
+
+        <label for="privateKey">Private Key:</label><br>
+        <textarea id="privateKey" name="privateKey" rows="10" cols="50" required></textarea><br><br>
+
+        <label for="installationId">Installation ID:</label><br>
+        <input type="text" id="installationId" name="installationId" required><br><br>
+
+        <label for="vaultToken">Vault Token:</label><br>
+        <input type="text" id="vaultToken" name="vaultToken" required><br><br>
+
+        <label for="vaultEndpoint">Vault Endpoint:</label><br>
+        <input type="text" id="vaultEndpoint" name="vaultEndpoint" required><br><br>
+
+        <label for="githubToken">GitHub Token:</label><br>
+        <input type="text" id="githubToken" name="githubToken" required><br><br>
+
+        <label for="organization">Organization Name:</label><br>
+        <input type="text" id="organization" name="organization" required><br><br>
+
+        <button type="submit">Execute Scripts</button>
+    </form>
+</body>
+
+</html>
