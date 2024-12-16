@@ -1,43 +1,16 @@
-README.md
-
 # Key Management
+Converted to a GitHub App
 
 ## Install the required packages:
-`npm install inquirer csv-parser node-vault axios`
+`npm install json2csv fs @octokit/core @octokit/auth-app inquirer csv-parser node-vault`
 
-## Notes:
-
-Replace 'https://your-vault-server:8200' with your Vault server URL.
-Replace 'YOUR_VAULT_TOKEN' with your Vault token.
-Replace 'YOUR_GITHUB_TOKEN' with your GitHub personal access token with the necessary scopes.
-Ensure the CSV file has a column named email containing the user email addresses.
-Adjust the secretPath according to your Vault's key storage path.
-Make sure your Vault and GitHub tokens have the permissions required.
-
-
-# Identies
-
-## Install Dependencies:
-`npm install axios json2csv`
-
-## Replace Placeholders:
-
-Replace 'YOUR_GITHUB_TOKEN' with your GitHub personal access token.
-Replace 'YOUR_ORGANIZATION_NAME' with the name of your GitHub organization.
-Run the Script:
-
-`node your_script_name.js`
-
-## Notes:
-
-The script fetches all members of the specified organization.
-It retrieves public user details like username, name, and email.
-The email field will only contain data if the user has made their email public.
-The resulting data is exported to a members.csv file.
+## What is the GitHub App?
+The App fetches all members of the specified organization(s).
+It retrieves public user details like username, name, and email using the GitHub API and stores them in a CSV file.
+The email field of the CSV file will be used to fetch the SSH or GPG keys from HashiCorp Vault.
+The SSH or GPG keys are then uploaded to the GitHub members profiles (maybe).
 
 # The GitHub APP
-
-Replace Placeholders
 YOUR_APP_ID: Replace with your GitHub App's ID.
 YOUR_PRIVATE_KEY_CONTENT: Replace with the content of your GitHub App's private key.
 YOUR_INSTALLATION_ID: Replace with your GitHub App's installation ID for the organization.
